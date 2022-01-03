@@ -1,0 +1,184 @@
+:root {
+   --main-background-color: rgb(49, 190, 56);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: sans-serif;
+   background-image: url("https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg");
+   background-size: cover;
+   /* background-repeat: no-repeat; */
+   background-position: center;
+}
+
+.body-wrapper {
+   min-height: 140vh;
+   width: 1000px;
+   margin: 0 auto;
+   background: rgba(47, 167, 77, 0.8);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+header {
+   color: rgb(158, 0, 0);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+h1 {
+   font-size: 60px;
+}
+
+h2 {
+   font-size: 20px;
+}
+
+h3 {
+   font-size: 25px;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+.character-form {
+   margin: 0 auto;
+   font-size: 20px;
+   /* display: flex;
+   flex-direction: column; */
+   text-align: left;
+   background: rgb(150, 255, 250);
+   width: 60%;
+   padding: 50px;
+   border-radius: 20px;
+}
+
+/* input[type="radio"] {
+   display: inline-block;
+} */
+
+
+button {
+   font-size: 25px;
+   padding: 5px;
+   margin: 10px;
+   border-radius: 10px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.pokemon-card {
+   display: none;
+   margin: 10px;
+   font-family: Verdana;
+   background-color: transparent;
+   width: 500px;
+   height: 750px;
+   perspective: 1000px; /*Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.pokemon-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.pokemon-card:hover .pokemon-card-inner {
+   transform: rotateY(180deg);
+}
+
+.pokemon-card-front {
+   background-color: rgb(255, 255, 255);
+   padding: 20px;
+   border: 1px black solid;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Position the front and back side */
+.pokemon-card-front,
+.pokemon-card-back {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   --webkit-backface-visibilitY: hidden; /* Safari */
+   backface-visibility: hidden;
+}
+
+#pokemon-img {
+   width: 90%;
+   height: auto;
+}
+
+.pokemon-types {
+   display: flex;
+   flex-direction: row;
+}
+
+.pokemon-type-box {
+   margin: 8px;
+   padding: 10px;
+   border: 2px white solid;
+   border-radius: 10px;
+}
+
+.type-text {
+   font-size: 25px;
+   color: white;
+}
+
+.flavor-text-box {
+   min-height: 100px;
+   margin: 20px;
+   padding: 10px;
+   background-color: rgb(26, 54, 33);
+   /* border: 2px white solid; */
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.flavor-text {
+   font-size: 18px;
+   color: white;
+}
+
+.pokemon-card-back {
+   font-family: "Press Start 2P", cursive;
+   background-color: rgb(255, 255, 255);
+   transform: rotateY(180deg);
+   border: 1px black solid;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+#pokemon-thumbnail {
+   width: 200px;
+}
+
+.combat-stats-box {
+   margin: 50px 15px;
+   display: grid;
+   grid-template-columns: 1fr 1.1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   column-gap: 60px;
+   row-gap: 10px;
+}
+
+.combat-stat {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}

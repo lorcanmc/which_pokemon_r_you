@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+         rel="stylesheet"
+      />
+      <title>index</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <div class="body-wrapper">
+         <!--  header -->
+         <header>
+            <h1>Which Pokemon R U?</h1>
+         </header>
+         <section class="character-form">
+            <!-- Q1 -->
+            <h2>Favorite pokemon type?</h2>
+            <input type="radio" name="pokemon-type" value="fire" id="fire" />
+            <label for="fire">Fire</label><br />
+            <input type="radio" name="pokemon-type" value="water" id="water" />
+            <label for="water">Water</label><br />
+            <input type="radio" name="pokemon-type" value="grass" id="grass" />
+            <label for="grass">Grass</label><br />
+            <!-- Q2 -->
+            <h2>Favorite holiday destination?</h2>
+            <input type="radio" name="holiday" value="beach" id="beach" />
+            <label for="beach">The beach</label><br />
+            <input type="radio" name="holiday" value="city" id="city" />
+            <label for="city">The city</label><br />
+            <input type="radio" name="holiday" value="mountains" id="mountains" />
+            <label for="mountains">The mountains</label><br />
+            <!-- Q3 -->
+            <h2>In your free time, you like to:</h2>
+            <input type="radio" name="free-time" value="swim" id="swim" />
+            <label for="swim">Scuba dive</label><br />
+            <input type="radio" name="free-time" value="travel" id="travel" />
+            <label for="travel">Travel afar</label><br />
+            <input type="radio" name="free-time" value="roam" id="roam" />
+            <label for="roam">Roam the wilderness</label><br />
+
+            <button id="submit-character-form">Submit</button>
+            
+         </section>
+         <!-- pokemon card -->
+         <div class="pokemon-card">
+            <div class="pokemon-card-inner">
+               <!-- front -->
+               <div class="pokemon-card-front">
+                  <h3 id="pokedex-number">Pokedex #</h3>
+                  <h2 id="name"></h2>
+                  <img
+                     id="pokemon-img"
+                     src="https://spng.pngfind.com/pngs/s/621-6217352_download-and-blank-effect-transparent-clipart-png-photo.png"
+                  />
+                  <div class="pokemon-types"></div>
+                  <div class="flavor-text-box">
+                     <p class="flavor-text"></p>
+                  </div>
+               </div>
+               <!-- back -->
+               <div class="pokemon-card-back">
+                  <img
+                     id="pokemon-thumbnail"
+                     src="https://spng.pngfind.com/pngs/s/621-6217352_download-and-blank-effect-transparent-clipart-png-photo.png"
+                  />
+                  <h3>Stats</h3>
+                  <div class="combat-stats-box">
+                     <div class="combat-stat">
+                        <p>hp</p>
+                        <p id="hp">10</p>
+                     </div>
+                     <div class="combat-stat">
+                        <p>sp attack</p>
+                        <p id="sp-attack">22</p>
+                     </div>
+                     <div class="combat-stat">
+                        <p>attack</p>
+                        <p id="attack">22</p>
+                     </div>
+                     <div class="combat-stat">
+                        <p>sp defence</p>
+                        <p id="sp-defence">22</p>
+                     </div>
+                     <div class="combat-stat">
+                        <p>defence</p>
+                        <p id="defence">22</p>
+                     </div>
+                     <div class="combat-stat">
+                        <p>speed</p>
+                        <p id="speed">22</p>
+                     </div>
+                  </div>
+                  <h5 id="ability">Ability:</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="main.js"></script>
+   </body>
+</html>
